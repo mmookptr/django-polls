@@ -1,5 +1,6 @@
 # django-polls
 
+
 The project creating with the Django starter 5 steps of tutorial is a simple polls app where the user can sign up, login and then create their polls for others to take them. Using Django and python through out the whole project with the following features.
 
 ## Creating admin user
@@ -38,5 +39,20 @@ On which case were a question with the requested ID doesn’t exist. The view sh
 >       except Question.DoesNotExist:
 >           raise Http404("Question does not exist")
 >       return render(request, 'polls/detail.html', {'question': question})
+
+## Namespacing URL names
+Add namespaces to your URLconf. In the polls/urls.py file,add an app_name to set the application namespace to differentiate the URL name between apps, using :
+
+>       {% url %}
+
+## Create an automated tests
+In which case there are bugs amoung files, tests are simple routines that check the operation of your code. 
+
+Note:
+>> * Tests don’t just identify problems, they prevent them
+>>* Tests make your code more attractive
+
+
+
 
 
