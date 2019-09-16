@@ -1,7 +1,20 @@
 # django-polls
 
 
-The project creating with the Django starter 5 steps of tutorial is a simple polls app where the user can sign up, login and then create their polls for others to take them. Using Django and python through out the whole project with the following features.
+The project creating with the Django starter 5 steps of tutorial is a simple polls app where the user can sign up, login and then create their polls for others to take them. 
+
+
+ ## Requirements
+
+ The application requires
+* Django version 2.2.5 or newer
+* pytz version 2019.2 or newer
+* Python version 3.6 or newer
+* sqlparse version 0.3.0 or newer
+ * Python add-on modules as in [requirements.txt](requirements.txt)
+
+ ## How to run 
+ >      python3 manage.py runserver
 
 ## Creating admin user
 
