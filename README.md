@@ -13,7 +13,8 @@ The project creating with the Django starter 5 steps of tutorial is a simple pol
 * sqlparse version 0.3.0 or newer
  * Python add-on modules as in [requirements.txt](requirements.txt)
 
- ## How to run 
+ ## How to run
+ * First clone the repository to your own computer. Then open command line then type.
  >      python3 manage.py runserver
 
 ## Creating admin user
