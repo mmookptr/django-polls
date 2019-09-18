@@ -1,11 +1,5 @@
 import datetime
 
-<<<<<<< HEAD
-from django.test import TestCase
-from django.utils import timezone
-from django.urls  import reverse
-=======
->>>>>>> 97e0e51ad82d4f570137c0f54ba66ead183dac8a
 
 
 from django.test import TestCase
