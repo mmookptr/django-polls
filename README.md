@@ -16,7 +16,7 @@ The project creating with the Django starter 5 steps of tutorial is a simple pol
  * Then install requirements.
  >      $ pip3 install -r reqirements.txt
  * Then check if all reqirements are installed
- * Go to your dkango-polls directory and run the server.
+ * Go to your django-polls directory and run the server.
  >      $ python3 manage.py migrate
  >      $ pyhton3 manage.py runserver 
  * Then visit the app on: 
