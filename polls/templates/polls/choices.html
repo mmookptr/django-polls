@@ -1,0 +1,23 @@
+{% extends "./template.html" %}
+
+{% block content %}
+
+<h1>{{random_number}}</h1>
+
+<h1>Choices</h1>
+{% if not choices %}
+<h2>Not Have choice</h2>
+{% else %}
+<h2>Have choice</h2>
+{% endif %}
+<ul>
+{% for choice in choices %}
+    <li><b>{{choice.id}}</b>{{choice.choice_text}}</li>
+{% endfor %}
+</ul>
+
+{% endblock content %}
+
+{% block another %}
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente fuga harum voluptatum repellat esse? Ullam laudantium, atque quae itaque officia ut nisi ex mollitia quidem ab quos qui dignissimos dolorum.</p>
+{% endblock another %}

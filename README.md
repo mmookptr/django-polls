@@ -1,13 +1,13 @@
 # django-polls
 
 
-The project creating with the Django starter 5 steps of tutorial is a simple polls app where the user can sign up, login and then create their polls for others to take them. 
+The project creating with the Django 5 steps of tutorial is a simple polls app where the user can sign up, login and then create their polls for others to take them. 
 
 
  ## Requirements
 
  The application requires
- 
+ * Python version 3.6 or newer
  * Python add-on modules as in [requirements.txt](requirements.txt)
 
  ## How to run
@@ -15,12 +15,15 @@ The project creating with the Django starter 5 steps of tutorial is a simple pol
  >      $ git clone https://github.com/mmookptr/django-polls.git
  * Then install requirements.
  >      $ pip3 install -r reqirements.txt
- * Then check if all reqirements are installed
+ * Then check if all requirements are installed
  * Go to your django-polls directory and run the server.
  >      $ python3 manage.py migrate
  >      $ pyhton3 manage.py runserver 
  * Then visit the app on: 
  > [http://localhost:8000/polls](http://localhost:8000/polls)
+ * The polls question can be created by:
+ >      $ python3 manage.py createsuperuser
+ 
 
 ## Creating admin user
 

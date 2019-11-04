@@ -1,5 +1,5 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
 from django.views import generic
 from django.utils import timezone
@@ -10,7 +10,6 @@ from .models import Choice, Question
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'
-
     def get_queryset(self):
         """
         Return the last five published questions (not including those set to be
@@ -35,13 +34,28 @@ class ResultsView(generic.DetailView):
     model = Question
     template_name = 'polls/results.html'
 
+class SummaryView(generic.ListView):
+    model = Question
+    template_name = 'polls/summary.html'
+    context_object_name = 'questions'
+
+    def get_queryset(self):
+        return Question.objects.all()
+
+
+def choices(request):
+    choices = Choice.objects.all()
+    return render(request, 'polls/choices.html', {
+        "choices": choices,
+        "random_number": 3
+    })
 
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
         selected_choice = question.choice_set.get(pk=request.POST['choice'])
     except (KeyError, Choice.DoesNotExist):
-        # Redisplay the question voting form.
+        # Redi9splay the question voting form.
         return render(request, 'polls/details.html', {
             'question': question,
             'error_message': "You didn't select a choice.",
@@ -53,3 +67,6 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+def test_redirect(request):
+    return redirect(reverse('polls:index'))

@@ -1,0 +1,28 @@
+{% extends "./template.html" %}
+
+{% block content %}
+<h1>Summary</h1>
+
+<ul>
+    {% for question in questions %}
+        <li>
+        {{question.question_text}}
+            <table style="border: 1px solid black">
+            <thead style="border: 1px solid black">
+                <td style="border: 1px solid black">Choice</td>
+                <td style="border: 1px solid black">Votes</td>
+            </thead>
+            <tbody>
+            {% for choice in question.choice_set.all %}
+            <tr>
+                <td>{{choice.choice_text}}</td>
+                <td>{{choice.votes}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+            </table>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
